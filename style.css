@@ -1,0 +1,66 @@
+/* Dark mode styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://getlivewall.com/wp-content/uploads/2024/10/Plants-vs.-Zombies-by-Zhuang-Buchun-thumbnail-1500x844.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styling */
+.container {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Transparansi untuk teks agar lebih mudah dibaca */
+  padding: 10%; /* Padding responsif berdasarkan lebar layar */
+  border-radius: 10px; /* Radius sudut */
+  box-sizing: border-box; /* Memastikan padding dihitung dalam ukuran elemen */
+  width: 100%; /* Lebar penuh */
+  height: 100vh; /* Tinggi penuh layar */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Icon container */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual icon link */
+.icon {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.icon span {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.icon:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.icon:hover {
+  transform: translateY(-5px);
+}
