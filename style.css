@@ -31,8 +31,9 @@ h1 {
 /* Icon container */
 .icons {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-wrap: wrap; /* Membuat ikon turun ke bawah jika ruang tidak cukup */
+  justify-content: center; /* Menjaga ikon tetap di tengah */
+  gap: 20px; /* Jarak antar ikon */
 }
 
 /* Individual icon link */
@@ -41,6 +42,8 @@ h1 {
   color: #ffffff;
   text-align: center;
   transition: transform 0.3s;
+  flex: 1 1 120px; /* Lebar ikon minimal 120px, tetapi fleksibel */
+  max-width: 150px; /* Batas lebar maksimum untuk ikon */
 }
 
 .icon img {
@@ -63,4 +66,18 @@ h1 {
 
 .icon:hover {
   transform: translateY(-5px);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+  .icons {
+    gap: 15px; /* Kurangi jarak antar ikon */
+  }
+  .icon img {
+    width: 80px; /* Ukuran ikon lebih kecil */
+    height: 80px;
+  }
+  .icon span {
+    font-size: 1em; /* Ukuran teks lebih kecil */
+  }
 }
