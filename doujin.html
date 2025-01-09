@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirror</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0 20px;
+        }
+        a {
+            color: #007bff; /* Link aktif (biru) */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1 {
+            color: #90ee90; /* Hijau muda */
+        }
+        h5 {
+            color: #90ee90; /* Hijau muda */
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        code {
+            background-color: #333333;
+            color: #ffcc00;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, monospace;
+        }
+        s {
+            color: #ff6b6b; /* Link mati (merah) */
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .tutorial {
+            background-color: #2c2c2c;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #444444;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mirror</h1>
+    <p>Halaman ini mencantumkan mirror dari SchaleNetwork jika domain yang saat ini aktif dihapus.</p>
+
+    <h5>Pengamat</h5>
+    <p>Berikut ini akan secara otomatis mengarahkan Anda ke domain dengan ketersediaan tertinggi. Nama jalur dan kueri pencarian juga akan tetap dipertahankan selama pengalihan, sehingga disarankan menggunakan salah satu domain pengamat saat berbagi galeri.</p>
+    <ul>
+        <li><a href="https://schale.network">SCHALE</a></li>
+        <li><a href="https://gehenna.jp">Gehenna</a></li>
+    </ul>
+
+    <h5>Siswa</h5>
+    <ul>
+        <li><a href="https://niyaniya.moe">NiyaNiya</a></li>
+        <li><a href="https://shupogaki.moe">Shupogaki</a></li>
+        <li><a href="https://hoshino.one">Hoshino</a></li>
+    </ul>
+
+    <h5>Mati</h5>
+    <ul>
+        <li><s><a href="https://koharu.to">Koharu</a></s></li>
+        <li><s><a href="https://seia.to">Seia</a></s></li>
+    </ul>
+
+    <h5>Pengaya Pengalihan</h5>
+    <p>Pasang pengaya pengalihan yang mendukung ekspresi reguler. <a href="https://addons.mozilla.org/en-US/firefox/addon/redirector/">Pengaya ini</a> adalah contoh untuk Firefox.</p>
+    <div class="tutorial">
+        <p><strong>Konfigurasi contoh:</strong></p>
+        <ul>
+            <li><strong>Pencocokan:</strong> <code>https://koharu.to/(.+)</code></li>
+            <li><strong>Pengalihan:</strong> <code>https://schale.network/$1</code></li>
+        </ul>
+        <p>Untuk tutorial lengkap, lihat gambar berikut: <a href="https://puu.sh/KigbV/d3751afdc0.png">Tangkapan Layar Tutorial</a></p>
+    </div>
+</body>
+</html>
