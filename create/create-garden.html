@@ -4,25 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Garden</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <h1>Create Your Garden</h1>
-  
-  <div id="checkbox-container"></div>
 
-  <button onclick="generateGarden()">Create Garden</button>
+  <form id="garden-form">
+    <h2>Select Plants for Your Garden:</h2>
+    <div id="checkbox-container">
+      <!-- Checkboxes will be dynamically populated by JavaScript -->
+    </div>
 
-  <div id="grid" class="grid-container"></div>
+    <button type="submit">Create Garden</button>
+  </form>
 
-  <script src="script.js"></script>
-  <script>
-    // Mengambil data plant dari file JSON
-    fetch('plant-data.json')
-      .then(response => response.json())
-      .then(data => {
-        createCheckboxes(data); // Membuat checkbox berdasarkan data
-      });
-  </script>
+  <script src="scripts/create-garden.js"></script>
 </body>
 </html>
