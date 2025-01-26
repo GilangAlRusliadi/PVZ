@@ -1,12 +1,10 @@
 // File: scripts/create-survival.js
 
-// Mengambil data tanaman dari file JSON
 fetch('../plants.json')
   .then(response => response.json())
   .then(plantGroups => {
-    const container = document.getElementById('menu-container');
+    const container = document.getElementById('checkbox-container'); // Menggunakan ID baru
 
-    // Looping melalui grup tanaman dan membuat elemen checkbox untuk setiap tanaman
     for (const group in plantGroups) {
       const groupDiv = document.createElement('div');
       groupDiv.classList.add('group');
@@ -17,7 +15,6 @@ fetch('../plants.json')
 
       const plantData = plantGroups[group];
       
-      // Looping melalui tanaman dalam grup
       for (let id in plantData) {
         const label = document.createElement('label');
         const input = document.createElement('input');
@@ -32,7 +29,6 @@ fetch('../plants.json')
       container.appendChild(groupDiv);
     }
 
-    // Fungsi untuk menangani submit form
     document.getElementById('survival-form').addEventListener('submit', function(event) {
       event.preventDefault();
 
