@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Garden</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Create Your Garden</h1>
+  
+  <div id="checkbox-container"></div>
+
+  <button onclick="generateGarden()">Create Garden</button>
+
+  <div id="grid" class="grid-container"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Mengambil data plant dari file JSON
+    fetch('plant-data.json')
+      .then(response => response.json())
+      .then(data => {
+        createCheckboxes(data); // Membuat checkbox berdasarkan data
+      });
+  </script>
+</body>
+</html>
