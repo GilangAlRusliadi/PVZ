@@ -1,7 +1,7 @@
 // File: scripts/create-survival.js
 
 // Mengambil data tanaman dari file JSON
-fetch('data/plants.json')
+fetch('../plants.json')
   .then(response => response.json())
   .then(plantGroups => {
     const container = document.getElementById('menu-container');
