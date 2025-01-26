@@ -21,7 +21,7 @@ document.getElementById('edit-data-btn').addEventListener('click', () => {
   
       const downloadLink = document.getElementById('download-link');
       downloadLink.href = url;
-      downloadLink.download = 'updated-data.json';
+      downloadLink.download = 'playerData.json';
       downloadLink.style.display = 'block';
       downloadLink.textContent = 'Download Updated JSON';
     };
