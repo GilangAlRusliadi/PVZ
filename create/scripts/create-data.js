@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Pre-check the checkboxes
-    document.getElementById("scaredy-dream").checked = true;
-    document.getElementById("seed-rain").checked = true;
+    document.getElementById("scaredy-dream").checked = false;
+    document.getElementById("seed-rain").checked = false;
     document.getElementById("indestructible").checked = true;
     document.getElementById("column").checked = true;
     document.getElementById("travel-plant").checked = true;
     document.getElementById("travel-buff").checked = true;
     document.getElementById("super-random").checked = true;
+    document.getElementById("convey").checked = false;
   
     const waveInput = document.getElementById("max-wave");
     const waveValue = document.getElementById("wave-value");
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         blockType: new Array(200).fill(0),
         disabledPlantType: [],
         appearedZombieType: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27, 28, 30, 32, 31, 35, 36, 37, 38, 39, 40, 43, 33],
-        theMaxWave: parseInt(waveInput.value, 10),
+        theMaxWave: parseInt(waveInput.value, 10) * 10,
         startSun: parseInt(document.getElementById("total-sun").value, 10) || 500,
         isScaredyDream: document.getElementById("scaredy-dream").checked,
         isSeedRain: document.getElementById("seed-rain").checked,
@@ -35,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
         enableTravelBuff: document.getElementById("travel-buff").checked,
         isSuperRandom: document.getElementById("super-random").checked,
         zombieHealth: parseInt(document.getElementById("zombie-health").value, 10) || 0,
-        sceneType: parseInt(sceneInput.value, 10), // Convert selected option to integer
-        isConvey: false,
+        sceneType: parseInt(sceneInput.value, 10),
+        isConvey: document.getElementById("convey").checked,
         advBuffs: [],
         ultiBuffs: [],
         debuffs: [],
