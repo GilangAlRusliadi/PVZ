@@ -10,67 +10,71 @@
     <div class="form-container">
       <h1>Create Data</h1>
       <form id="dataForm">
-        <div class="form-group">
-          <label for="total-sun">Total Matahari</label>
-          <input type="number" id="total-sun" name="total-sun" min="0" required>
+        <div class="left-column">
+          <div class="form-group">
+            <label for="total-sun">Total Matahari</label>
+            <input type="number" id="total-sun" name="total-sun" min="0" required>
+          </div>
+          <div class="form-group">
+            <label for="zombie-health">Zombie Health</label>
+            <input type="number" id="zombie-health" name="zombie-health" min="0" required>
+          </div>
+          <div class="form-group">
+            <label for="max-wave">Total Wave</label>
+            <input type="range" id="max-wave" name="max-wave" min="1" max="10" value="1">
+            <div id="wave-value">Value: 1</div>
+          </div>
+          <div class="form-group">
+            <label for="scene">Tipe Scene</label>
+            <select id="scene" name="scene">
+              <option value="0">Day 5 Row</option>
+              <option value="1">Night 5 Row</option>
+              <option value="2">Pool Day</option>
+              <option value="3">Pool Night</option>
+              <option value="4">Rooftop</option>
+              <option value="6">Day 6 Row</option>
+              <option value="7">Night 6 Row</option>
+              <option value="8">Day 12 Row</option>
+              <option value="9">Pool 12 Row</option>
+              <option value="10">Tile</option>
+              <option value="11">Green Screen</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="zombie-health">Zombie Health</label>
-          <input type="number" id="zombie-health" name="zombie-health" min="0" required>
-        </div>
-        <div class="form-group">
-          <label for="max-wave">Total Wave</label>
-          <input type="range" id="max-wave" name="max-wave" min="1" max="10" value="1">
-          <div id="wave-value">Value: 1</div>
-        </div>
-        <div class="form-group">
-          <label for="scene">Tipe Scene</label>
-          <select id="scene" name="scene">
-            <option value="0">Day 5 Row</option>
-            <option value="1">Night 5 Row</option>
-            <option value="2">Pool Day</option>
-            <option value="3">Pool Night</option>
-            <option value="4">Rooftop</option>
-            <option value="6">Day 6 Row</option>
-            <option value="7">Night 6 Row</option>
-            <option value="8">Day 12 Row</option>
-            <option value="9">Pool 12 Row</option>
-            <option value="10">Tile</option>
-            <option value="11">Green Screen</option>
-          </select>
-        </div>
-        <!-- Boolean checkboxes -->
-        <div class="form-group">
-          <label for="scaredy-dream">Mode Jamur Penakut</label>
-          <input type="checkbox" id="scaredy-dream" name="scaredy-dream">
-        </div>
-        <div class="form-group">
-          <label for="seed-rain">Hujan Tanaman</label>
-          <input type="checkbox" id="seed-rain" name="seed-rain">
-        </div>
-        <div class="form-group">
-          <label for="indestructible">Atur Strategi</label>
-          <input type="checkbox" id="indestructible" name="indestructible">
-        </div>
-        <div class="form-group">
-          <label for="column">Kolom</label>
-          <input type="checkbox" id="column" name="column">
-        </div>
-        <div class="form-group">
-          <label for="travel-plant">Tanaman King</label>
-          <input type="checkbox" id="travel-plant" name="travel-plant">
-        </div>
-        <div class="form-group">
-          <label for="travel-buff">Buff King</label>
-          <input type="checkbox" id="travel-buff" name="travel-buff">
-        </div>
-        <div class="form-group">
-          <label for="super-random">Padi Random</label>
-          <input type="checkbox" id="super-random" name="super-random">
-        </div>
-        <div class="form-group">
-          <label for="convey">Mode Berjalan</label>
-          <input type="checkbox" id="convey" name="convey">
+        <!-- Checkbox group in the right column -->
+        <div class="right-column">
+          <div class="form-group">
+            <label for="scaredy-dream">Mode Jamur Penakut</label>
+            <input type="checkbox" id="scaredy-dream" name="scaredy-dream">
+          </div>
+          <div class="form-group">
+            <label for="seed-rain">Hujan Tanaman</label>
+            <input type="checkbox" id="seed-rain" name="seed-rain">
+          </div>
+          <div class="form-group">
+            <label for="indestructible">Atur Strategi</label>
+            <input type="checkbox" id="indestructible" name="indestructible">
+          </div>
+          <div class="form-group">
+            <label for="column">Kolom</label>
+            <input type="checkbox" id="column" name="column">
+          </div>
+          <div class="form-group">
+            <label for="travel-plant">Tanaman King</label>
+            <input type="checkbox" id="travel-plant" name="travel-plant">
+          </div>
+          <div class="form-group">
+            <label for="travel-buff">Buff King</label>
+            <input type="checkbox" id="travel-buff" name="travel-buff">
+          </div>
+          <div class="form-group">
+            <label for="super-random">Padi Random</label>
+            <input type="checkbox" id="super-random" name="super-random">
+          </div>
+          <div class="form-group">
+            <label for="convey">Mode Berjalan</label>
+            <input type="checkbox" id="convey" name="convey">
+          </div>
         </div>
         <button type="button" id="generate-config">Create Custom Block</button>
       </form>
