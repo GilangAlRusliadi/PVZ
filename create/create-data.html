@@ -139,50 +139,6 @@
       <button type="submit">Create JSON</button>
     </form>
   </div>
-  <script>
-    // Update the value display for Total Wave
-    const totalWaveInput = document.getElementById('totalWave');
-    const totalWaveValue = document.getElementById('totalWaveValue');
-    totalWaveInput.addEventListener('input', () => {
-      totalWaveValue.textContent = `Value: ${totalWaveInput.value}`;
-    });
-
-    // Update the value display for Scene
-    const sceneInput = document.getElementById('scene');
-    const sceneValue = document.getElementById('sceneValue');
-    sceneInput.addEventListener('input', () => {
-      sceneValue.textContent = `Value: ${sceneInput.value}`;
-    });
-
-    // Form submission to create JSON
-    const form = document.getElementById('dataForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-      data.totalWave = parseInt(data.totalWave);
-      data.scene = parseInt(data.scene);
-      data.totalSun = parseInt(data.totalSun);
-      data.zombieHealth = parseInt(data.zombieHealth);
-      data.scaredyDream = data.scaredyDream === 'true';
-      data.seedRain = data.seedRain === 'true';
-      data.indestructible = data.indestructible === 'true';
-      data.column = data.column === 'true';
-      data.travelPlant = data.travelPlant === 'true';
-      data.travelBuff = data.travelBuff === 'true';
-      data.superRandom = data.superRandom === 'true';
-
-      const jsonBlob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-      const url = URL.createObjectURL(jsonBlob);
-
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'CustomBlock.json';
-      a.click();
-
-      URL.revokeObjectURL(url);
-    });
-  </script>
+  <script src="scripts/create-data.js"></script>
 </body>
 </html>
