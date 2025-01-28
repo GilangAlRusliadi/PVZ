@@ -7,78 +7,81 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="form-container">
-    <h1>Create Data</h1>
-    <form id="dataForm">
-      <div class="form-group">
-        <label for="totalSun">Total Sun</label>
-        <input type="number" id="totalSun" name="totalSun" min="0" required>
-      </div>
-      <div class="form-group">
-        <label for="totalWave">Total Wave</label>
-        <input type="range" id="totalWave" name="totalWave" min="1" max="10" value="1">
-        <div class="range-value" id="totalWaveValue">Value: 1</div>
-      </div>
-      <div class="form-group">
-        <label for="zombieHealth">Zombie Health</label>
-        <input type="number" id="zombieHealth" name="zombieHealth" min="0" required>
-      </div>
-      <div class="form-group">
-        <label for="scene">Type Scene</label>
-        <input type="range" id="scene" name="scene" min="1" max="10" value="1">
-        <div class="range-value" id="sceneValue">Value: 1</div>
-      </div>
-      <div class="form-group">
-        <label for="scaredyDream">Scaredy Dream</label>
-        <select id="scaredyDream" name="scaredyDream" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="seedRain">Seed Rain</label>
-        <select id="seedRain" name="seedRain" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="indestructible">Indestructible</label>
-        <select id="indestructible" name="indestructible" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="column">Column</label>
-        <select id="column" name="column" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="travelPlant">Travel Plant</label>
-        <select id="travelPlant" name="travelPlant" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="travelBuff">Travel Buff</label>
-        <select id="travelBuff" name="travelBuff" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="superRandom">Super Random</label>
-        <select id="superRandom" name="superRandom" required>
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </div>
-      <button type="submit">Create JSON</button>
-    </form>
+  <div class="menu-container">
+    <div class="form-container">
+      <h1>Create Data</h1>
+      <form id="dataForm">
+        <div class="form-group">
+          <label for="total-sun">Total Sun</label>
+          <input type="number" id="total-sun" name="total-sun" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="max-wave">Total Wave</label>
+          <input type="range" id="max-wave" name="max-wave" min="1" max="10" value="1">
+          <div id="wave-value">Value: 1</div>
+        </div>
+        <div class="form-group">
+          <label for="scene">Type Scene</label>
+          <input type="range" id="scene" name="scene" min="1" max="10" value="1">
+          <div id="scene-value">Value: 1</div>
+        </div>
+        <div class="form-group">
+          <label for="zombie-health">Zombie Health</label>
+          <input type="number" id="zombie-health" name="zombie-health" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="scaredy-dream">Scaredy Dream</label>
+          <select id="scaredy-dream" name="scaredy-dream" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="seed-rain">Seed Rain</label>
+          <select id="seed-rain" name="seed-rain" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="indestructible">Indestructible</label>
+          <select id="indestructible" name="indestructible" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="column">Column</label>
+          <select id="column" name="column" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="travel-plant">Travel Plant</label>
+          <select id="travel-plant" name="travel-plant" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="travel-buff">Travel Buff</label>
+          <select id="travel-buff" name="travel-buff" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="super-random">Super Random</label>
+          <select id="super-random" name="super-random" required>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select>
+        </div>
+        <button type="button" id="generate-config">Create JSON</button>
+      </form>
+      <pre id="output"></pre>
+    </div>
   </div>
   <script src="scripts/create-data.js"></script>
 </body>
