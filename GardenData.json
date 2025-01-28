@@ -253,7 +253,7 @@
         {
             "thePlantRow": 3,
             "thePlantColumn": 1,
-            "thePlantType": 917,
+            "thePlantType": 925,
             "growStage": 2,
             "waterLevel": 100,
             "love": 0,
@@ -263,7 +263,7 @@
         {
             "thePlantRow": 3,
             "thePlantColumn": 2,
-            "thePlantType": 905,
+            "thePlantType": 926,
             "growStage": 2,
             "waterLevel": 100,
             "love": 0,
@@ -273,7 +273,7 @@
         {
             "thePlantRow": 3,
             "thePlantColumn": 3,
-            "thePlantType": 903,
+            "thePlantType": 927,
             "growStage": 2,
             "waterLevel": 100,
             "love": 0,
@@ -283,7 +283,7 @@
         {
             "thePlantRow": 3,
             "thePlantColumn": 4,
-            "thePlantType": 921,
+            "thePlantType": 928,
             "growStage": 2,
             "waterLevel": 100,
             "love": 0,
@@ -293,7 +293,7 @@
         {
             "thePlantRow": 3,
             "thePlantColumn": 5,
-            "thePlantType": 904,
+            "thePlantType": 929,
             "growStage": 2,
             "waterLevel": 100,
             "love": 0,
@@ -303,7 +303,7 @@
         {
             "thePlantRow": 3,
             "thePlantColumn": 6,
-            "thePlantType": 1033,
+            "thePlantType": 930,
             "growStage": 2,
             "waterLevel": 100,
             "love": 0,
