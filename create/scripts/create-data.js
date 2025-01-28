@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const sceneInput = document.getElementById("scene");
     const sceneValue = document.getElementById("scene-value");
     const generateButton = document.getElementById("generate-config");
-    const output = document.getElementById("output");
   
     // Update the displayed value when the range slider changes
     waveInput.addEventListener("input", () => {
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sceneValue.textContent = `Value: ${sceneInput.value}`;
     });
   
-    // Generate JSON configuration
+    // Generate and download JSON configuration
     generateButton.addEventListener("click", () => {
       const config = {
         isSaved: true,
@@ -39,14 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
         debuffs: [],
       };
   
-      // Display JSON in the output
-    //   output.textContent = JSON.stringify(config, null, 2);
-  
       // Create and download JSON file
       const blob = new Blob([JSON.stringify(config, null, 2)], { type: "application/json" });
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "CustomBlock.json";
+      link.download = "CustomBlock.json";  // Changed file name
       link.click();
     });
   });
