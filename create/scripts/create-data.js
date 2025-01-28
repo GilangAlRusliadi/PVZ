@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         disabledPlantType: [],
         appearedZombieType: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 27, 28, 30, 32, 31, 35, 36, 37, 38, 39, 40, 43, 33],
         theMaxWave: parseInt(waveInput.value, 10),
-        startSun: parseInt(document.getElementById("total-sun").value, 10),
+        startSun: parseInt(document.getElementById("total-sun").value, 10) || 500,  // Default to 500 if not filled
         isScaredyDream: document.getElementById("scaredy-dream").checked,
         isSeedRain: document.getElementById("seed-rain").checked,
         isIndestructible: document.getElementById("indestructible").checked,
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         enableTravelPlant: document.getElementById("travel-plant").checked,
         enableTravelBuff: document.getElementById("travel-buff").checked,
         isSuperRandom: document.getElementById("super-random").checked,
-        zombieHealth: parseInt(document.getElementById("zombie-health").value, 10),
+        zombieHealth: parseInt(document.getElementById("zombie-health").value, 10) || 0,  // Default to 0 if not filled
         sceneType: parseInt(sceneInput.value, 10),
         isConvey: false,
         advBuffs: [],
