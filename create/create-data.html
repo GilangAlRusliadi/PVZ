@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .form-container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      width: 400px;
+    }
+    .form-container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="number"], select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="range"] {
+      width: 100%;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .range-value {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Create Data</h1>
+    <form id="dataForm">
+      <div class="form-group">
+        <label for="totalSun">Total Sun (Manual Input)</label>
+        <input type="number" id="totalSun" name="totalSun" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="totalWave">Total Wave (Horizontal Scroll)</label>
+        <input type="range" id="totalWave" name="totalWave" min="1" max="10" value="1">
+        <div class="range-value" id="totalWaveValue">Value: 1</div>
+      </div>
+      <div class="form-group">
+        <label for="zombieHealth">Zombie Health (Manual Input)</label>
+        <input type="number" id="zombieHealth" name="zombieHealth" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="scene">Scene (Horizontal Scroll)</label>
+        <input type="range" id="scene" name="scene" min="1" max="10" value="1">
+        <div class="range-value" id="sceneValue">Value: 1</div>
+      </div>
+      <div class="form-group">
+        <label for="scaredyDream">Scaredy Dream</label>
+        <select id="scaredyDream" name="scaredyDream" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="seedRain">Seed Rain</label>
+        <select id="seedRain" name="seedRain" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="indestructible">Indestructible</label>
+        <select id="indestructible" name="indestructible" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="column">Column</label>
+        <select id="column" name="column" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="travelPlant">Travel Plant</label>
+        <select id="travelPlant" name="travelPlant" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="travelBuff">Travel Buff</label>
+        <select id="travelBuff" name="travelBuff" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="superRandom">Super Random</label>
+        <select id="superRandom" name="superRandom" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <button type="submit">Create JSON</button>
+    </form>
+  </div>
+  <script>
+    // Update the value display for Total Wave
+    const totalWaveInput = document.getElementById('totalWave');
+    const totalWaveValue = document.getElementById('totalWaveValue');
+    totalWaveInput.addEventListener('input', () => {
+      totalWaveValue.textContent = `Value: ${totalWaveInput.value}`;
+    });
+
+    // Update the value display for Scene
+    const sceneInput = document.getElementById('scene');
+    const sceneValue = document.getElementById('sceneValue');
+    sceneInput.addEventListener('input', () => {
+      sceneValue.textContent = `Value: ${sceneInput.value}`;
+    });
+
+    // Form submission to create JSON
+    const form = document.getElementById('dataForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      data.totalWave = parseInt(data.totalWave);
+      data.scene = parseInt(data.scene);
+      data.totalSun = parseInt(data.totalSun);
+      data.zombieHealth = parseInt(data.zombieHealth);
+      data.scaredyDream = data.scaredyDream === 'true';
+      data.seedRain = data.seedRain === 'true';
+      data.indestructible = data.indestructible === 'true';
+      data.column = data.column === 'true';
+      data.travelPlant = data.travelPlant === 'true';
+      data.travelBuff = data.travelBuff === 'true';
+      data.superRandom = data.superRandom === 'true';
+
+      const jsonBlob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(jsonBlob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'CustomBlock.json';
+      a.click();
+
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
