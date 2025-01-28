@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- <div class="menu-container"> -->
     <div class="form-container">
       <h1>Create Data</h1>
       <form id="dataForm">
@@ -21,13 +20,24 @@
           <div id="wave-value">Value: 1</div>
         </div>
         <div class="form-group">
-          <label for="scene">Type Scene</label>
-          <input type="range" id="scene" name="scene" min="1" max="10" value="1">
-          <div id="scene-value">Value: 1</div>
-        </div>
-        <div class="form-group">
           <label for="zombie-health">Zombie Health</label>
           <input type="number" id="zombie-health" name="zombie-health" min="0" required>
+        </div>
+        <div class="form-group">
+          <label for="scene">Type Scene</label>
+          <select id="scene" name="scene">
+            <option value="0">Day 5 Row</option>
+            <option value="1">Night 5 Row</option>
+            <option value="2">Pool Day</option>
+            <option value="3">Pool Night</option>
+            <option value="4">Rooftop</option>
+            <option value="6">Day 6 Row</option>
+            <option value="7">Night 6 Row</option>
+            <option value="8">Day 12 Row</option>
+            <option value="9">Pool 12 Row</option>
+            <option value="10">Tile</option>
+            <option value="11">Green Screen</option>
+          </select>
         </div>
         <!-- Boolean checkboxes -->
         <div class="form-group">
@@ -58,11 +68,10 @@
           <label for="super-random">Super Random</label>
           <input type="checkbox" id="super-random" name="super-random">
         </div>
-        <button type="button" id="generate-config">Create JSON</button>
+        <button type="button" id="generate-config">Create Custom Block</button>
       </form>
       <pre id="output"></pre>
     </div>
-  <!-- </div> -->
   <script src="scripts/create-data.js"></script>
 </body>
 </html>
