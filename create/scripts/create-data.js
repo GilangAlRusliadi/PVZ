@@ -24,7 +24,7 @@ generateButton.addEventListener("click", (event) => {
     };
   
     // Display JSON in the output
-    output.textContent = JSON.stringify(config, null, 2);
+    // output.textContent = JSON.stringify(config, null, 2);
   
     // Create and download JSON file
     const blob = new Blob([JSON.stringify(config, null, 2)], { type: "application/json" });
