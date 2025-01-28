@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Data</title>
-  <link rel="stylesheet" href="create.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="form-container">
@@ -12,33 +12,73 @@
     <form id="dataForm">
       <div class="form-group">
         <label for="totalSun">Total Sun (Manual Input)</label>
-        <input type="number" id="total-sun" name="totalSun" min="0" required>
+        <input type="number" id="totalSun" name="totalSun" min="0" required>
       </div>
       <div class="form-group">
         <label for="totalWave">Total Wave (Horizontal Scroll)</label>
-        <input type="range" id="max-wave" name="totalWave" min="1" max="10" value="1">
-        <div class="range-value" id="wave-value">Value: 1</div>
+        <input type="range" id="totalWave" name="totalWave" min="1" max="10" value="1">
+        <div class="range-value" id="totalWaveValue">Value: 1</div>
       </div>
       <div class="form-group">
         <label for="zombieHealth">Zombie Health (Manual Input)</label>
-        <input type="number" id="zombie-health" name="zombieHealth" min="0" required>
+        <input type="number" id="zombieHealth" name="zombieHealth" min="0" required>
       </div>
       <div class="form-group">
         <label for="scene">Scene (Horizontal Scroll)</label>
         <input type="range" id="scene" name="scene" min="1" max="10" value="1">
-        <div class="range-value" id="scene-value">Value: 1</div>
+        <div class="range-value" id="sceneValue">Value: 1</div>
       </div>
       <div class="form-group">
         <label for="scaredyDream">Scaredy Dream</label>
-        <select id="scaredy-dream" name="scaredyDream" required>
+        <select id="scaredyDream" name="scaredyDream" required>
           <option value="true">True</option>
           <option value="false">False</option>
         </select>
       </div>
-      <!-- Elemen lainnya sama seperti sebelumnya -->
-      <button type="button" id="generate-config">Generate JSON</button>
+      <div class="form-group">
+        <label for="seedRain">Seed Rain</label>
+        <select id="seedRain" name="seedRain" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="indestructible">Indestructible</label>
+        <select id="indestructible" name="indestructible" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="column">Column</label>
+        <select id="column" name="column" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="travelPlant">Travel Plant</label>
+        <select id="travelPlant" name="travelPlant" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="travelBuff">Travel Buff</label>
+        <select id="travelBuff" name="travelBuff" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="superRandom">Super Random</label>
+        <select id="superRandom" name="superRandom" required>
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </div>
+      <button type="submit">Create JSON</button>
     </form>
-    <pre id="output"></pre>
   </div>
   <script src="scripts/create-data.js"></script>
 </body>
