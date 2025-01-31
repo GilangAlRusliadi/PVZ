@@ -39,7 +39,7 @@
   "difficulty": 2,
   "gameMusicVolume": 1.0,
   "gameSoundVolume": 1.0,
-  "gameSpeed": 2.0,
+  "gameSpeed": 5.0,
   "unlockMixPlant": [],
   "survivalLevelCompleted": [
     true, true, true, true, true, true, true, true, true, true, 
@@ -60,7 +60,7 @@
   "tutorLevelCompleted": [7],
   "wheatColor": true,
   "achievements": [0, 1000, 1, 3, 2, 57, 56, 4, 13, 60, 22, 39, 55, 24, 58],
-  "advLevel": 50,
+  "advLevel": 45,
   "advZhouMu": 45,
   "randomPlantInZhouMu": [],
   "disablePreSelectInAdv": true,
