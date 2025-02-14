@@ -21,7 +21,7 @@ body {
   border-radius: 10px; /* Radius sudut */
   box-sizing: border-box; /* Memastikan padding dihitung dalam ukuran elemen */
   width: 100%; /* Lebar penuh */
-  height: 100vh; /* Tinggi penuh layar */
+  min-height: 100vh; /* Tinggi penuh layar */
 }
 
 h1 {
