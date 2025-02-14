@@ -10,6 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: auto;
 }
 
 /* Container styling */
@@ -31,9 +32,11 @@ h1 {
 /* Icon container */
 .icons {
   display: flex;
-  flex-wrap: wrap; /* Membuat ikon turun ke bawah jika ruang tidak cukup */
-  justify-content: center; /* Menjaga ikon tetap di tengah */
-  gap: 20px; /* Jarak antar ikon */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow-y: auto;
+  padding: 10px;
 }
 
 /* Individual icon link */
