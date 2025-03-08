@@ -1,9 +1,10 @@
 /* Dark mode styling */
+/* https://getlivewall.com/wp-content/uploads/2024/10/Plants-vs.-Zombies-by-Zhuang-Buchun-thumbnail-1500x844.jpg */
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: url('https://getlivewall.com/wp-content/uploads/2024/10/Plants-vs.-Zombies-by-Zhuang-Buchun-thumbnail-1500x844.jpg') no-repeat center center fixed;
+  background: url('images/Plants vs. Zombies by Zhuang Buchun.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #ffffff;
   display: flex;
