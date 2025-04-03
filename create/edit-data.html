@@ -6,8 +6,15 @@
   <title>Edit Data</title>
   <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bc2e591-7f06-4273-b443-2d3cf6346c3c/d4k7h2a-38ff6a79-6e9c-42a3-892b-fba1bb539db2.png/v1/fit/w_512,h_512/plants_vs_zombies_icon_v2_by_kamizanon_d4k7h2a-375w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTEyIiwicGF0aCI6IlwvZlwvM2JjMmU1OTEtN2YwNi00MjczLWI0NDMtMmQzY2Y2MzQ2YzNjXC9kNGs3aDJhLTM4ZmY2YTc5LTZlOWMtNDJhMy04OTJiLWZiYTFiYjUzOWRiMi5wbmciLCJ3aWR0aCI6Ijw9NTEyIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.dO_fwRT888sIMI-gMFJirC0iMMuDv7evqjLT-7ACTs0" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../background.css">
 </head>
 <body>
+  <div class="overlay"></div>
+  <video id="dynamicVideo" autoplay muted loop>
+      <source id="videoSource" type="video/mp4">
+  </video>
+  <script src="../script.js"></script>
+
   <div class="tool-container">
     <h1>Edit Data</h1>
     <input type="file" id="upload-json" accept="application/json">
