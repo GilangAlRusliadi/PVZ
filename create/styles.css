@@ -149,3 +149,12 @@ a:hover {
   margin-right: 10px;
   display: inline-block;
 }
+
+.overlay {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+}

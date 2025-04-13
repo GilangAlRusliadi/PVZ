@@ -7,10 +7,10 @@ video {
     height: 100%;
     object-fit: cover;
     z-index: -1;  /* Agar video berada di belakang konten */
-  }
+}
   
-  /* Overlay hitam */
-  .overlay {
+/* Overlay hitam */
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,4 +20,4 @@ video {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease-in-out;
-  }
+}
